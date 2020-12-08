@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+/*Global CSS*/
+:root {
+    --main-font: 'Poppins', sans-serif;
+    --blue-dark: #1a3262;
+    --blue-light: #103e9a;
+    --gray-color: #f7f7f7;
+    --gray-light: #bbbbbb;
+    --gray-dark: #828282;
+    --main-shadow: 0 .4rem .6rem rgba(0,0,0,.2);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--main-font);
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+i {
+    font-size: 1.2rem;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none !important;
+}
+
+.btn-link {
+    display: inline-flex;
+    font-size: 1.1rem;
+    color: #fff;
+    text-transform: capitalize;
+    padding: .5rem .8rem;
+    border-radius: 1.3rem;
+    opacity: .9;
+    transition: all .3s ease-in-out;
+}
+
+.btn-link:hover {
+    opacity: 1;
+    color: #fff;
+}
+
+.global-title {
+    color: var(--blue-light);
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    margin: .5rem 0;
+    font-weight: 600;
+}
+
+.img_circle {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+
+.img_circle img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+/***********Start pages*****************/
+/*Start page profile*/
+.top-content {
+    display: flex;
+}
+
+.top-content aside{
+    width: 5rem;
+}
+
+.top-content .nav-left {
+    background: linear-gradient(to bottom,var(--blue-light),var(--blue-dark));
+    text-align: center;
+    color: var(--gray-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top-content .nav-left .logo {
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0 0 2rem 0;
+}
+
+.top-content .nav-left .logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.top-content .nav-left .icon {
+    position: relative;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    color: var(--gray-light);
+    display: inline-block;
+    width: 2rem;
+    height: 3.5rem;
+    border-radius: 1.2rem;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.top-content .nav-left .icon i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.top-content .nav-left .icon.active,
+.top-content .nav-left .icon:hover {
+    background: #fff;
+    color: var(--blue-dark);
+}
+
+.top-content .nav-left .img-profile-left {
+    margin: 2rem auto 0;
+}
+
+.content_right .profile_img {
+    height: 18rem;
+}
+
+.content_right .profile_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: var(--main-shadow);
+}
+
+.content_right .icon-changes i {
+    cursor: pointer;
+    padding: 0.5rem 0;
+    font-size: 1.5rem;
+}
+
+.content_right .btns a:last-child{
+    background: var(--blue-light);
+}
+
+.content_right .details_em .info i {
+    font-size: .5rem;
+    margin: 0 .5rem;
+}
+
+.content_right .table th,
+.content_right .table td {
+    padding: 0.25rem;
+}
+
+.content_right .table th {
+    color: var(--gray-light);
+}
+
+.content_right .table td {
+    padding-left: 15%;
+    color: #333;
+}
+
+/* start page customer */
+.content_right .title i {
+    color: var(--blue-light);
+    font-size: 2.5rem;
+}
+
+.content_right form {
+    position: relative;
+    color: var(--gray-light);
+}
+
+.content_right form input {
+    background: #f7f7f7;
+    border: none;
+    border-radius: 1.3rem;
+    padding: 0.5rem 0 0.5rem 3.5rem;
+    width: 16rem;
+}
+
+.content_right form i {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+}
+
+.content_right .btn_filter {
+    display: flex;
+    align-items: center;
+    background: var(--blue-light);
+    color: #fff;
+    border-radius: 1.5rem 0 0 1.5rem;
+    padding: 0.5rem 1.3rem ;
+}
+
+.customer_page .customer_content {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: .4rem;
+    place-items: center;
+    
+}
+
+.customer_page .customer_content .customer_card, 
+.contract_page .contract_content .contract_card {
+    background: #f7f7f7;
+    text-align: center;
+    border-radius: .3rem;
+}
+
+.customer_card .img_circle {
+    margin: auto; 
+}
+
+.customer_card .info h6 {
+    font-size: 1rem;
+}
+
+.customer_card .info address,
+.contract_card .info address {
+    justify-content: center;
+}
+
+.customer_card .info address i ,
+.contract_card .info address i {
+    font-size: .5rem;
+    margin: 0 .3rem;
+}
+
+.customer_page .info .details .col-6:nth-of-type(3),
+.customer_page .info .details .col-6:nth-of-type(4) {
+    margin-top: 0.5rem;
+}
+
+.customer_page .info .details span,
+.contract_page .details span {
+    display: block;
+    color: #6c757d;
+}
+
+/*start page contract*/
+.contract_page .global-title {
+    margin: 0;
+}
+
+.contract_page address {
+    margin-bottom: 0;
+}
